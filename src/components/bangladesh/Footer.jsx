@@ -77,7 +77,7 @@ export default function Footer() {
           <div className="flex items-center gap-5">
             <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-foreground transition">Privacy</a>
             <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-foreground transition">Terms</a>
-            <span className="font-bangla">জয় বাংলা</span>
+            <span className="font-bangla">We Love Bangladesh</span>
           </div>
         </div>
       </div>
