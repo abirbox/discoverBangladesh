@@ -26,7 +26,7 @@ const img = {
 
 export const IMAGES = img;
 
-// Map pins use percentage coordinates over the stylized map container.
+// Map pins use percentage coordinates over the Bangladesh country silhouette.
 export const destinations = [
   {
     id: "dhaka",
@@ -35,7 +35,7 @@ export const destinations = [
     region: "Capital City",
     image: img.dhaka,
     description: "A pulsing megacity where centuries-old Mughal heritage meets relentless modern energy along the Buriganga river.",
-    pin: { x: 40, y: 47 },
+    pin: { x: 50, y: 46 },
   },
   {
     id: "coxsbazar",
@@ -44,7 +44,7 @@ export const destinations = [
     region: "Bay of Bengal",
     image: img.coxsbazar,
     description: "Home to the world's longest unbroken natural sandy beach — 120 kilometres of golden shoreline meeting the sea.",
-    pin: { x: 72, y: 86 },
+    pin: { x: 68, y: 82 },
   },
   {
     id: "sundarbans",
@@ -53,7 +53,7 @@ export const destinations = [
     region: "Mangrove Delta",
     image: img.sundarbans,
     description: "The largest mangrove forest on Earth, a misty labyrinth of tidal rivers and the last refuge of the Bengal tiger.",
-    pin: { x: 30, y: 80 },
+    pin: { x: 40, y: 73 },
   },
   {
     id: "sylhet",
@@ -62,7 +62,7 @@ export const destinations = [
     region: "Tea Country",
     image: img.sylhet,
     description: "Endless emerald tea gardens rolling into misty hills, where every morning smells of fresh leaves and rain.",
-    pin: { x: 66, y: 22 },
+    pin: { x: 66, y: 31 },
   },
   {
     id: "bandarban",
@@ -71,7 +71,7 @@ export const destinations = [
     region: "Hill Tracts",
     image: img.bandarban,
     description: "Layered blue mountains floating above the clouds — the spiritual heart of the Chittagong hill tracts.",
-    pin: { x: 78, y: 70 },
+    pin: { x: 70, y: 70 },
   },
   {
     id: "saintmartin",
@@ -80,7 +80,7 @@ export const destinations = [
     region: "Coral Island",
     image: img.saintmartin,
     description: "Bangladesh's only coral island — turquoise lagoons, coconut palms and a pace measured by the tides.",
-    pin: { x: 86, y: 95 },
+    pin: { x: 71, y: 94 },
   },
   {
     id: "rangamati",
@@ -89,7 +89,7 @@ export const destinations = [
     region: "Lake District",
     image: img.rangamati,
     description: "The serene Kaptai lake cradled by green hills, dotted with bamboo villages and hanging bridges.",
-    pin: { x: 72, y: 64 },
+    pin: { x: 70, y: 64 },
   },
   {
     id: "sonargaon",
@@ -98,7 +98,7 @@ export const destinations = [
     region: "Ancient Capital",
     image: img.sonargaon,
     description: "The medieval capital of Bengal — crumbling mansions and artisans keeping the old crafts alive.",
-    pin: { x: 46, y: 55 },
+    pin: { x: 52, y: 49 },
   },
 ];
 

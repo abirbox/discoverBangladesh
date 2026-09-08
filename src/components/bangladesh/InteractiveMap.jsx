@@ -5,9 +5,9 @@ import { destinations } from "@/data/bangladesh";
 import Reveal from "./Reveal";
 import { Image } from "@/components/ui/image";
 
-// Stylized, artistic Bangladesh silhouette (approximate delta shape)
+// Bangladesh country boundary, simplified from an openly available country GeoJSON.
 const MAP_PATH =
-  "M120 40 C 170 30, 210 50, 235 45 C 260 40, 280 60, 300 70 C 330 80, 360 95, 355 120 C 380 140, 395 175, 375 200 C 390 230, 370 270, 340 285 C 360 320, 330 360, 295 365 C 280 395, 240 400, 210 380 C 185 400, 150 395, 140 365 C 100 360, 75 330, 85 295 C 55 280, 45 240, 70 215 C 45 195, 50 155, 80 140 C 75 110, 95 60, 120 40 Z";
+  "M316 304.6 L314.7 349.3 L293 339.8 L297 390 L279.2 357.5 L275.6 325.8 L263.8 295.8 L237.7 259.5 L180.3 257 L186 282.7 L166.4 317.4 L139.9 304.7 L130.8 316.1 L113.2 309.3 L89.1 303.7 L79.4 252.4 L57.8 205.5 L68.4 167.9 L30 151.2 L43.8 128.5 L82.8 105.3 L37.8 72.3 L59.8 30 L109.2 56.9 L139 60 L144.5 103.3 L203.8 111.9 L261.6 111 L297.5 121.6 L268.8 174.4 L240.9 178 L221.6 213.4 L255.8 245.7 L266 205.9 L283.2 205.7 Z";
 
 export default function InteractiveMap() {
   const [active, setActive] = useState(destinations[0]);
@@ -49,7 +49,8 @@ export default function InteractiveMap() {
               </svg>
 
               {/* Bangladesh silhouette */}
-              <svg viewBox="0 0 400 420" className="relative w-full h-full">
+              <svg viewBox="0 0 350 420" className="relative w-full h-full" role="img" aria-label="Map of Bangladesh">
+                <title>Bangladesh</title>
                 <defs>
                   <linearGradient id="landGrad" x1="0" y1="0" x2="1" y2="1">
                     <stop offset="0%" stopColor="hsl(150 45% 18%)" />
@@ -65,10 +66,6 @@ export default function InteractiveMap() {
                   animate={{ scale: active ? 1 : 1 }}
                   style={{ transformOrigin: "center" }}
                 />
-                {/* river lines */}
-                <path d="M120 40 C 180 120, 150 220, 210 380" stroke="hsl(var(--river))" strokeWidth="1.5" fill="none" opacity="0.4" />
-                <path d="M235 45 C 220 160, 300 240, 295 365" stroke="hsl(var(--river))" strokeWidth="1.2" fill="none" opacity="0.35" />
-                <path d="M300 70 C 320 180, 360 230, 340 285" stroke="hsl(var(--river))" strokeWidth="1" fill="none" opacity="0.3" />
               </svg>
 
               {/* Pins */}
