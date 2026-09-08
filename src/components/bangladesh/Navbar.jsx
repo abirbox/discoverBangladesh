@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "@/data/bangladesh";
+import BrandLogo from "@/components/bangladesh/BrandLogo";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -31,22 +32,24 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Floating leaf pill */}
+      {/* Floating top navigation */}
       <motion.div
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ${
-          nearBottom ? "opacity-0 pointer-events-none translate-y-4" : "opacity-100"
-        } ${scrolled ? "bottom-5" : "bottom-6"}`}
+          nearBottom ? "opacity-0 pointer-events-none -translate-y-4" : "opacity-100"
+        } ${scrolled ? "top-5" : "top-6"}`}
       >
-        <div className="glass-dark rounded-full pl-5 pr-2 py-2 flex items-center gap-3 shadow-2xl shadow-black/40">
+        <div className="glass-dark rounded-full pl-3 pr-2 py-2 flex items-center gap-3 shadow-2xl shadow-black/40">
           <a
             href="#hero"
             onClick={(e) => { e.preventDefault(); go("#hero"); }}
-            className="font-display text-lg font-semibold text-gradient-gold tracking-wide hidden sm:block"
+            className="flex items-center gap-2.5 focus-gold rounded-full"
+            aria-label="Back to the top"
           >
-            Discover Bangladesh
+            <BrandLogo className="h-9 w-9" />
+            <span className="font-display text-lg font-semibold text-gradient-gold tracking-wide hidden sm:block">Discover Bangladesh</span>
           </a>
           <button
             onClick={() => setOpen(true)}
@@ -69,7 +72,10 @@ export default function Navbar() {
             className="fixed inset-0 z-[60] bg-[hsl(var(--moss-deep))]/70 backdrop-blur-2xl flex flex-col"
           >
             <div className="flex justify-between items-center px-6 sm:px-12 py-7">
-              <span className="font-display text-2xl text-gradient-gold">Discover Bangladesh</span>
+              <a href="#hero" onClick={(e) => { e.preventDefault(); go("#hero"); }} className="flex items-center gap-3 rounded-lg focus-gold" aria-label="Back to the top">
+                <BrandLogo className="h-10 w-10" />
+                <span className="font-display text-2xl text-gradient-gold">Discover Bangladesh</span>
+              </a>
               <button
                 onClick={() => setOpen(false)}
                 className="h-11 w-11 rounded-full glass text-foreground grid place-items-center focus-gold"
