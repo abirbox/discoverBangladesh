@@ -51,7 +51,7 @@ export default function FinalCTA() {
               Explore Destinations
             </MagneticButton>
             <MagneticButton variant="outline" onClick={() => document.querySelector("#hero")?.scrollIntoView({ behavior: "smooth" })}>
-              Discover Bangladesh
+              Brand Bangladesh
             </MagneticButton>
           </div>
         </Reveal>

@@ -32,14 +32,14 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Floating top navigation */}
+      {/* Floating bottom navigation */}
       <motion.div
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ${
-          nearBottom ? "opacity-0 pointer-events-none -translate-y-4" : "opacity-100"
-        } ${scrolled ? "top-5" : "top-6"}`}
+          nearBottom ? "opacity-0 pointer-events-none translate-y-4" : "opacity-100"
+        } ${scrolled ? "bottom-5" : "bottom-6"}`}
       >
         <div className="glass-dark rounded-full pl-3 pr-2 py-2 flex items-center gap-3 shadow-2xl shadow-black/40">
           <a
@@ -48,8 +48,8 @@ export default function Navbar() {
             className="flex items-center gap-2.5 focus-gold rounded-full"
             aria-label="Back to the top"
           >
-            <BrandLogo className="h-9 w-9" />
-            <span className="font-display text-lg font-semibold text-gradient-gold tracking-wide hidden sm:block">Discover Bangladesh</span>
+            <BrandLogo className="h-9 w-28 sm:w-32" />
+            <span className="sr-only">Brand Bangladesh</span>
           </a>
           <button
             onClick={() => setOpen(true)}
@@ -73,8 +73,7 @@ export default function Navbar() {
           >
             <div className="flex justify-between items-center px-6 sm:px-12 py-7">
               <a href="#hero" onClick={(e) => { e.preventDefault(); go("#hero"); }} className="flex items-center gap-3 rounded-lg focus-gold" aria-label="Back to the top">
-                <BrandLogo className="h-10 w-10" />
-                <span className="font-display text-2xl text-gradient-gold">Discover Bangladesh</span>
+                <BrandLogo className="h-11 w-36 sm:w-44" />
               </a>
               <button
                 onClick={() => setOpen(false)}
@@ -104,7 +103,7 @@ export default function Navbar() {
             </nav>
             <div className="px-6 sm:px-12 py-7 flex items-center justify-between text-xs text-muted-foreground font-body">
               <span className="font-bangla">বাংলাদেশ</span>
-              <span>© 2026 Discover Bangladesh</span>
+              <span>© 2026 Brand Bangladesh</span>
             </div>
           </motion.div>
         )}

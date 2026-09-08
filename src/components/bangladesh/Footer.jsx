@@ -25,14 +25,9 @@ export default function Footer() {
         <div className="grid md:grid-cols-12 gap-10 pb-14 border-b border-white/10">
           {/* Brand */}
           <div className="md:col-span-5">
-            <a href="#hero" onClick={(e) => { e.preventDefault(); go("#hero"); }} className="inline-flex items-center gap-3 rounded-lg focus-gold" aria-label="Back to the top">
-              <BrandLogo className="h-12 w-12" />
-              <span className="font-display text-3xl font-semibold text-gradient-gold">Discover Bangladesh</span>
+            <a href="#hero" onClick={(e) => { e.preventDefault(); go("#hero"); }} className="inline-flex rounded-lg focus-gold" aria-label="Back to the top">
+              <BrandLogo className="h-auto w-64 max-w-full" />
             </a>
-            <p className="font-bangla text-lg text-muted-foreground mt-1">বাংলাদেশ আবিষ্কার করুন</p>
-            <p className="mt-5 max-w-sm text-muted-foreground leading-relaxed">
-              An immersive journey through the rivers, nature, culture and stories of a nation shaped by water.
-            </p>
             <div className="mt-6 flex items-center gap-3">
               {socials.map((s) => (
                 <a
@@ -77,7 +72,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
-          <p>© 2026 Discover Bangladesh. All Rights Reserved.</p>
+          <p>© 2026 Brand Bangladesh. All Rights Reserved.</p>
           <div className="flex items-center gap-5">
             <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-foreground transition">Privacy</a>
             <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-foreground transition">Terms</a>
